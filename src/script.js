@@ -15,7 +15,7 @@ obj.a = 10;
 console.log(obj);
 
 console.log(name);
-var name = 'ivan'
+var name = 'marsel'
 
 {
     let result = 50;
