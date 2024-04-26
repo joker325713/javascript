@@ -5,7 +5,7 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false,
+    privat: true,
     start: function() {
         personalMovieDB.count = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
@@ -53,9 +53,16 @@ const personalMovieDB = {
     },
     writeYourGenres: function() {
         for (let i = 1; i <= 3; i++) {
-            const genre = prompt(`Ваш любимый жанр под номером ${i}`);
-            personalMovieDB.genres[i - 1] = genre;
+            let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+            if(genre !== null && genre !== '') {
+                personalMovieDB.genres[i - 1] = genre;
+            } else {
+                i--;
+            }   
       }
+      personalMovieDB.genres.forEach((item, i) => {
+        console.log(`Любимый жанр ${i+1} - это ${item}`);
+      });
     }
 }; 
 
@@ -63,8 +70,6 @@ personalMovieDB.start();
 personalMovieDB.rememberMyFilms();
 personalMovieDB.detectPersonalLevel();
 personalMovieDB.toggleVisibleMyDB();
-//personalMovieDB.showMyDB(personalMovieDB.privat);
-
+personalMovieDB.showMyDB(personalMovieDB.privat);
 personalMovieDB.writeYourGenres();
-
 console.log(personalMovieDB);
