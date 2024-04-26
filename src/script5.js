@@ -43,7 +43,7 @@ function rememberMyFilms() {
       }          
 }
 
-/* rememberMyFilms(); */
+rememberMyFilms();
 
 
 //Второй способ
@@ -93,7 +93,7 @@ function detectPersonalLevel() {
       }
 }
 
-/* detectPersonalLevel(); */
+detectPersonalLevel();
 
 function showMyDB(hidden) {
       if(!hidden) {

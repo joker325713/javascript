@@ -1,16 +1,22 @@
 "use strict";
 
-const arr = [1, 4, 7, 9, 12];
-/* arr.push(33);
-console.log(arr); */
+const personalMovieDB = {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: true
+};
 
-/* arr.forEach(function(i, item, arr) {
-    console.log(`${i}: ${item} внутри массива ${arr}`);
-}); */
-
-arr.sort(costNumber);   
-console.log(arr);
-
-function costNumber(a, b) {
-    return a - b;
+function toggleVisibleMyDB() {
+    if(personalMovieDB.privat === true) {
+        personalMovieDB.privat = false;
+        console.log('да');
+    }
+    else if(personalMovieDB.privat === false) {
+        personalMovieDB.privat = true;
+    }
 }
+
+toggleVisibleMyDB();
+console.log(personalMovieDB);

@@ -1,6 +1,6 @@
 "use strict";
 
-//const arr = [1, 2, 3, 5, 8];
+const arr = [1, 2, 3, 5, 8];
 
 //arr.pop(); delete last
 //arr.push(10); add new 
