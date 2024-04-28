@@ -51,7 +51,6 @@ document.body.append(div); //вставялется новый div в конце
 //wrapper.replaceChild(circles[0], hearts[0]); старый способ не используется
 
 div.innerHTML = "<h1>Hello world</h1>";//вставляет текст в объект HTML
-
 //div.textContent = "Hello"; //только текст
 
 div.insertAdjacentHTML("afterend", '<h2>Helloqo</h2>'); //есть еще afterbegin, beforeend, afterend
