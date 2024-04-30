@@ -41,31 +41,31 @@ let students = {
         pro: [{
             name: 'Sam',
             progress: 10
-        }],
+        }] ,
 
-        semi: {
+         semi: {
             students: [{
                 name: 'Test',
                 progress: 100
             }]
-        }
+        }  
     }
 };
 
  function getTotalProgressByIteration(data) {
     let total = 0;
-    let studens = 0;
+    let students = 0;
 
     for (let course of Object.values(data)) {
         if (Array.isArray(course)) {
-            studens += course.length;
+            students += course.length;
 
             for (let i = 0; i < course.length; i++) {
                 total += course[i].progress;
             }
         } else {
             for (let subCourse of Object.values(course)) {
-                studens += subCourse.length;
+                students += subCourse.length;
 
                 for (let i = 0; i < subCourse.length; i++) {
                     total += subCourse[i].progress;
@@ -74,7 +74,7 @@ let students = {
         }
     } ;
 
-    return total / studens;
+    return total / students;
 } 
 
 //console.log(getTotalProgressByIteration(students));
