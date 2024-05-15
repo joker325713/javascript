@@ -22,7 +22,7 @@ console.log(result);
 
 const some = [4, 'dsfsdf', 'sdfsdfsdf'];
 
-console.log(some.some(item => typeof(item) === 'number'));
+//console.log(some.some(item => typeof(item) === 'number'));
 
 console.log(some.every(item => typeof(item) === 'number'));
 
