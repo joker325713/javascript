@@ -1,5 +1,15 @@
-"use strict";
+const multiply20 = (price) => price * 20;
+const divide100 = (price) => price / 100;
+const normalizePrice = (price) => price.toFixed(2);
 
-const str = 'My name is R2D2';
+const discount = normalizePrice(divide100(multiply20(200)));
 
-console.log(str.match(/\D/ig));
+const compose = (...fns) => x => fns.reduceRight((acc, fn) => fn(acc), x);
+
+const withСompose = compose(
+    normalizePrice,
+    divide100,
+    multiply20
+  );
+
+console.log(withСompose(200, 20, 100, 2));
