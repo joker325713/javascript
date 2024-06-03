@@ -17,7 +17,7 @@ nextYear() {
 
 commitInputChanges = (e, color) => {
     this.setState({
-        position: e.targer.valur
+        position: e.targer.value
     })
 }
 
